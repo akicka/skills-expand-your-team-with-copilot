@@ -32,6 +32,36 @@
   --info-light: #d1ecf1;
 }
 
+/* Dark mode theme */
+[data-theme="dark"] {
+  --primary: #3949ab;
+  --primary-light: #6f74dd;
+  --primary-dark: #00227b;
+  --primary-text: #ffffff;
+
+  --secondary: #ffa040;
+  --secondary-light: #ffd180;
+  --secondary-dark: #c67100;
+  --secondary-text: #ffffff;
+
+  --background: #121212;
+  --surface: #1e1e1e;
+  --text-primary: #e0e0e0;
+  --text-secondary: #aaaaaa;
+  --border: #333333;
+  --border-light: #2a2a2a;
+  --border-focus: #555555;
+
+  --success: #4caf50;
+  --success-light: #1b3a1c;
+  --warning: #ffb74d;
+  --warning-light: #3a2e00;
+  --error: #ef5350;
+  --error-light: #3b0f0f;
+  --info: #4fc3f7;
+  --info-light: #0d2a38;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -617,6 +647,9 @@ footer {
   position: absolute;
   top: 10px;
   right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 #user-status {
@@ -662,5 +695,25 @@ footer {
 }
 
 #logout-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Dark mode toggle button */
+#dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  color: var(--primary-text);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-right: 8px;
+}
+
+#dark-mode-toggle:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
